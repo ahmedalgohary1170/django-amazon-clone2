@@ -4,6 +4,13 @@ from .models import Products, Brand , ProductImages
 
 
 
-admin.site.register(Products)
+class ProductImageInline(admin.TabularInline):
+    model = ProductImages
+
+
+
+class ProductAdmin(admin.ModelAdmin):
+    inlines = [ProductImageInline]
+
+admin.site.register(Products,ProductAdmin)
 admin.site.register(Brand)
-admin.site.register(ProductImages)
