@@ -11,5 +11,6 @@ class ProductList(ListView):
     model = Products
 
 
+
 class ProductDetail(DetailView):
     model = Products
